@@ -1,6 +1,9 @@
 const Attendance = require("../models/Attendance");
 
-const today = () => new Date().toISOString().split("T")[0];
+const today = () => {
+  const d = new Date();
+  return d.toLocaleDateString("en-CA");
+};
 
 exports.checkIn = async (req, res) => {
   try {

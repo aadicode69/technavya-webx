@@ -1,5 +1,5 @@
 import { Navigate } from "react-router-dom"
-import HrDashboard from "@/components/dashboard/hrDash"
+import HrDashboard from "@/components/dashboard/HrDashboard"
 import EmployeeDashboard from "@/pages/EmployeeDashboard"
 
 export default function RoleRoute() {

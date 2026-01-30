@@ -1,26 +1,17 @@
 import { Routes, Route, Navigate } from "react-router-dom"
-
-/* Public */
 import Home from "./components/Home"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
-
-/* HR */
-import HrDashboard from "./components/dashboard/hrDash"
+import HrDashboard from "./components/dashboard/HrDashboard"
 import Employees from "./pages/Employees"
 import Attendance from "./pages/Attendance"
 import LeaveApprovals from "./pages/LeaveApprovals"
 import Payroll from "./pages/Payroll"
-
-/* Employee */
 import EmployeeDashboard from "./pages/EmployeeDashboard"
 import EmployeeAttendance from "./pages/employee/Attendance"
 import ApplyLeave from "./pages/employee/ApplyLeave"
-
-/* Shared */
 import Profile from "./pages/Profile"
 
-/* ---------------- AUTH GUARDS ---------------- */
 
 function RequireAuth({ children }) {
   const token = localStorage.getItem("token")
@@ -38,14 +29,11 @@ function RoleRoute({ allowed, children }) {
 export default function App() {
   return (
     <Routes>
-      {/* HOME — NEVER AUTO REDIRECT */}
       <Route path="/" element={<Home />} />
 
-      {/* PUBLIC */}
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
 
-      {/* HR */}
       <Route
         path="/hr/dashboard"
         element={
@@ -101,7 +89,6 @@ export default function App() {
         }
       />
 
-      {/* EMPLOYEE */}
       <Route
         path="/employee/dashboard"
         element={
@@ -145,7 +132,6 @@ export default function App() {
         }
       />
 
-      {/* FALLBACK */}
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )

@@ -15,6 +15,6 @@ router.post("/apply", auth, applyLeave);
 router.get("/me", auth, getMyLeaves);
 
 router.get("/", auth, role("ADMIN"), getAllLeaves);
-router.put("/:id", auth, role("ADMIN"), updateLeaveStatus);
+router.put("/:leaveId", auth, role("ADMIN"), updateLeaveStatus);
 
 module.exports = router;

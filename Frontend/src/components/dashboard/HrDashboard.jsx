@@ -10,11 +10,13 @@ import {
 } from "lucide-react"
 import API from "@/services/api"
 import DashboardLayout from "./DashboardLayout"
+import { useNavigate } from "react-router-dom"
 
 export default function HrDashboard() {
   const [profile, setProfile] = useState(null)
   const [employees, setEmployees] = useState([])
   const [loading, setLoading] = useState(true)
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function loadDashboard() {
@@ -102,26 +104,11 @@ export default function HrDashboard() {
                 Requests awaiting your approval
               </p>
             </div>
-            <button className="rounded-md border px-3 py-1 text-sm">
+            <button onClick={() => navigate("/leaves")} className="rounded-md border px-3 py-1 text-sm">
               View All
             </button>
           </div>
           <p className="text-sm text-gray-500">No pending requests</p>
-        </div>
-
-        {/* Quick Actions */}
-        <div className="rounded-xl border bg-white p-6">
-          <h2 className="mb-1 text-lg font-semibold">Quick Actions</h2>
-          <p className="mb-4 text-sm text-gray-500">
-            Frequently used HR functions
-          </p>
-
-          <div className="grid grid-cols-2 gap-4">
-            <QuickAction icon={<Users />} label="Manage Employees" />
-            <QuickAction icon={<CalendarDays />} label="View Attendance" />
-            <QuickAction icon={<UserCheck />} label="Leave Approvals" />
-            <QuickAction icon={<DollarSign />} label="Payroll Management" />
-          </div>
         </div>
       </div>
 

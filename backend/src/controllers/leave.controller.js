@@ -10,7 +10,7 @@ exports.applyLeave = async (req, res) => {
       type,
       fromDate,
       toDate,
-      reason
+      reason,
     });
 
     res.status(201).json(leave);
@@ -21,8 +21,9 @@ exports.applyLeave = async (req, res) => {
 
 exports.getMyLeaves = async (req, res) => {
   try {
-    const leaves = await Leave.find({ user: req.user.id })
-      .sort({ createdAt: -1 });
+    const leaves = await Leave.find({ user: req.user.id }).sort({
+      createdAt: -1,
+    });
 
     res.json(leaves);
   } catch (err) {
@@ -46,7 +47,11 @@ exports.updateLeaveStatus = async (req, res) => {
   try {
     const { status, adminComment } = req.body;
 
-    const leave = await Leave.findById(req.params.id);
+    if (!["APPROVED", "REJECTED"].includes(status)) {
+      return res.status(400).json({ message: "Invalid status" });
+    }
+
+    const leave = await Leave.findById(req.params.leaveId);
     if (!leave)
       return res.status(404).json({ message: "Leave not found" });
 
@@ -54,19 +59,21 @@ exports.updateLeaveStatus = async (req, res) => {
     leave.adminComment = adminComment;
     await leave.save();
 
+    // Mark attendance only if approved
     if (status === "APPROVED") {
       let current = new Date(leave.fromDate);
       const end = new Date(leave.toDate);
 
       while (current <= end) {
         const date = current.toISOString().split("T")[0];
+        console.log("🔥 LEAVE APPROVED → creating attendance for:", leave.user, date);
 
         await Attendance.findOneAndUpdate(
           { user: leave.user, date },
           {
             user: leave.user,
             date,
-            status: "HALF_DAY"
+            status: "LEAVE"
           },
           { upsert: true }
         );
@@ -74,8 +81,8 @@ exports.updateLeaveStatus = async (req, res) => {
         current.setDate(current.getDate() + 1);
       }
     }
-
     res.json(leave);
+
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
