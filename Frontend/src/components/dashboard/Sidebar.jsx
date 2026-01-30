@@ -26,7 +26,7 @@ export default function Sidebar({ user }) {
   ]
 
   return (
-    <aside className="flex w-72 flex-col bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white">
+    <aside className=" font-comfortaa flex w-72 flex-col bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white">
       
       {/* Logo */}
       <div className="flex items-center gap-4 px-6 py-6">

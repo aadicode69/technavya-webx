@@ -49,7 +49,7 @@ export default function HrDashboard() {
   return (
     <DashboardLayout user={profile}>
       {/* HEADER */}
-      <div className="mb-8 flex items-center justify-between">
+      <div className="mb-8 flex items-center justify-between font-comfortaa">
         <div>
           <h1 className="text-3xl font-bold">HR Dashboard</h1>
           <p className="text-gray-500">

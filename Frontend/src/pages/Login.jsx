@@ -50,145 +50,152 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 p-4">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-      </div>
+    <div className="min-h-screen flex items-center justify-center bg-black p-4">
+      {/* Subtle background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-black to-zinc-900"></div>
 
-      <div className="max-w-5xl w-full relative">
-        <div className="bg-white/95 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden">
-          <div className="grid md:grid-cols-2 gap-0">
+      <div className="max-w-6xl w-full relative">
+        <div className="backdrop-blur-xl bg-zinc-900/50 border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
+          <div className="grid md:grid-cols-5 gap-0">
             {/* Left Side - Branding */}
-            <div className="bg-gradient-to-br from-blue-600 to-indigo-700 p-8 md:p-12 flex flex-col justify-center text-white relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32"></div>
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full -ml-24 -mb-24"></div>
+            <div className="md:col-span-2 p-12 flex flex-col justify-between border-r border-white/10 relative overflow-hidden">
+              {/* Subtle decoration */}
+              <div className="absolute top-0 right-0 w-96 h-96 bg-white/[0.02] rounded-full -mr-48 -mt-48"></div>
               
               <div className="relative z-10">
-                <h1 className="text-4xl font-bold mb-4">Dayflow HR</h1>
-                <p className="text-blue-100 text-lg mb-8">Complete Human Resource Management System for modern organizations. Manage employees, attendance, payroll, and performance all in one place.</p>
+                <div className="mb-16">
+                  <h1 className="text-4xl font-bold text-white mb-3 tracking-tight">Dayflow</h1>
+                  <p className="text-zinc-400 text-sm leading-relaxed">
+                    Enterprise HR management for modern teams
+                  </p>
+                </div>
                 
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <svg className="w-6 h-6 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-blue-50">Employee & Attendance Tracking</span>
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-1 h-12 bg-gradient-to-b from-white to-transparent"></div>
+                    <div>
+                      <h3 className="text-white font-medium mb-1">Streamlined Operations</h3>
+                      <p className="text-zinc-500 text-sm">Manage your entire workforce from one platform</p>
+                    </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <svg className="w-6 h-6 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-blue-50">Automated Payroll Processing</span>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-1 h-12 bg-gradient-to-b from-white/70 to-transparent"></div>
+                    <div>
+                      <h3 className="text-white font-medium mb-1">Enterprise Security</h3>
+                      <p className="text-zinc-500 text-sm">Bank-level encryption and data protection</p>
+                    </div>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <svg className="w-6 h-6 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-blue-50">Performance Management Tools</span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <svg className="w-6 h-6 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-blue-50">Leave & Time-off Management</span>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-1 h-12 bg-gradient-to-b from-white/40 to-transparent"></div>
+                    <div>
+                      <h3 className="text-white font-medium mb-1">Real-time Analytics</h3>
+                      <p className="text-zinc-500 text-sm">Actionable insights at your fingertips</p>
+                    </div>
                   </div>
                 </div>
+              </div>
+
+              <div className="relative z-10">
+                <p className="text-zinc-600 text-xs">
+                  Trusted by 10,000+ companies worldwide
+                </p>
               </div>
             </div>
 
             {/* Right Side - Login Form */}
-            <div className="p-8 md:p-12">
-              <div className="mb-6">
-                <h2 className="text-2xl font-bold text-gray-900">Welcome Back</h2>
-                <p className="text-sm text-gray-600 mt-1">Sign in to access your dashboard</p>
-              </div>
-
-              {error && (
-                <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg flex items-center text-sm text-red-700">
-                  <svg className="w-4 h-4 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-                  </svg>
-                  {error}
+            <div className="md:col-span-3 p-12">
+              <div className="max-w-md mx-auto">
+                <div className="mb-10">
+                  <h2 className="text-3xl font-bold text-white mb-2">Welcome Back</h2>
+                  <p className="text-zinc-500 text-sm">Sign in to access your dashboard</p>
                 </div>
-              )}
 
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-xs font-medium text-gray-700 mb-1">Email Address</label>
-                  <div className="relative">
-                    <svg className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
+                {error && (
+                  <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-sm text-red-400">
+                    {error}
+                  </div>
+                )}
+
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-400 mb-2">Email Address</label>
                     <input
                       type="email"
                       name="email"
                       required
-                      className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-white/30 text-white placeholder-zinc-600 transition-all"
                       placeholder="name@company.com"
                       onChange={handleChange}
                     />
                   </div>
-                </div>
 
-                <div>
-                  <div className="flex items-center justify-between mb-1">
-                    <label className="block text-xs font-medium text-gray-700">Password</label>
-                    <Link to="#" className="text-xs text-blue-600 hover:text-blue-500">
-                      Forgot password?
-                    </Link>
-                  </div>
-                  <div className="relative">
-                    <svg className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <label className="block text-sm font-medium text-zinc-400">Password</label>
+                      <Link to="#" className="text-sm text-zinc-500 hover:text-white transition-colors">
+                        Forgot?
+                      </Link>
+                    </div>
                     <input
                       type="password"
                       name="password"
                       required
-                      className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-white/30 text-white placeholder-zinc-600 transition-all"
                       placeholder="••••••••"
                       onChange={handleChange}
                     />
                   </div>
+
+                  <div className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id="remember"
+                      className="w-4 h-4 rounded border-white/10 bg-white/5 text-white focus:ring-white/50 focus:ring-offset-black"
+                    />
+                    <label htmlFor="remember" className="ml-3 text-sm text-zinc-500">
+                      Remember me for 30 days
+                    </label>
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isLoading}
+                    className="w-full py-3.5 bg-white text-black font-semibold rounded-xl hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isLoading ? "Signing in..." : "Sign In"}
+                  </button>
+
+                  <div className="relative my-6">
+                    <div className="absolute inset-0 flex items-center">
+                      <div className="w-full border-t border-white/10"></div>
+                    </div>
+                    <div className="relative flex justify-center text-xs">
+                      <span className="px-4 bg-zinc-900/50 text-zinc-600">or</span>
+                    </div>
+                  </div>
+
+                  <p className="text-center text-sm text-zinc-500">
+                    Don't have an account?{" "}
+                    <Link to="/signup" className="font-medium text-white hover:text-zinc-300 transition-colors">
+                      Create account
+                    </Link>
+                  </p>
+                </form>
+
+                <div className="mt-8 pt-6 border-t border-white/10">
+                  <p className="text-xs text-zinc-600 text-center">
+                    Protected by enterprise-grade security and encryption
+                  </p>
                 </div>
-
-                <div className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id="remember"
-                    className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                  />
-                  <label htmlFor="remember" className="ml-2 text-xs text-gray-600">
-                    Remember me for 30 days
-                  </label>
-                </div>
-
-                <button
-                  onClick={handleSubmit}
-                  disabled={isLoading}
-                  className="w-full py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-semibold rounded-lg hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isLoading ? "Signing in..." : "Sign In"}
-                </button>
-
-                <p className="text-center text-xs text-gray-600 pt-2">
-                  Don't have an account?{" "}
-                  <Link to="/signup" className="font-medium text-blue-600 hover:text-blue-500">
-                    Create account
-                  </Link>
-                </p>
-              </div>
-
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <p className="text-xs text-gray-500 text-center">
-                  Protected by enterprise-grade security and encryption
-                </p>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Bottom text */}
+        <p className="text-center text-zinc-700 text-xs mt-8">
+          By signing in, you agree to our Terms of Service and Privacy Policy
+        </p>
       </div>
     </div>
   );

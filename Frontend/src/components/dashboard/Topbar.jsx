@@ -2,7 +2,7 @@ import { Bell } from "lucide-react"
 
 export default function Topbar({ user }) {
   return (
-    <header className="flex h-16 items-center justify-between border-b bg-white px-6">
+    <header className="flex h-16 font-comfortaa items-center justify-between border-b bg-white px-6">
       <h2 className="text-lg font-semibold">HR Dashboard</h2>
 
       <div className="flex items-center gap-5">

@@ -23,7 +23,7 @@ export default function EmployeeSidebar({ user }) {
   ]
 
   return (
-    <aside className="flex w-72 flex-col bg-gradient-to-b from-indigo-700 via-indigo-600 to-purple-600 text-white">
+    <aside className="flex w-72 flex-col font-comfortaa bg-gradient-to-b from-indigo-700 via-indigo-600 to-purple-600 text-white">
       {/* Logo */}
       <div className="px-6 py-6">
         <h2 className="text-xl font-bold">HR Portal</h2>

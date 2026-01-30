@@ -11,9 +11,9 @@ export default function Attendance() {
 
   return (
     <DashboardLayout role="ADMIN">
-      <h1 className="mb-6 text-2xl font-semibold">Attendance</h1>
+      <h1 className="mb-6 text-2xl font-semibold font-comfortaa">Attendance</h1>
 
-      <div className="overflow-hidden rounded-xl bg-white shadow-sm">
+      <div className="overflow-hidden rounded-xl bg-white shadow-sm font-comfortaa">
         <table className="w-full text-sm">
           <thead className="border-b bg-slate-50 text-slate-500">
             <tr>

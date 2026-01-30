@@ -279,7 +279,7 @@ export default function Payroll() {
         }
       `}</style>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 p-6 lg:p-8">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 p-6 lg:p-8 font-comfortaa">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8">
             <h1 className="serif mb-2 text-3xl font-bold text-slate-900">

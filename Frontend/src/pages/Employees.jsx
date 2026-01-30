@@ -110,7 +110,7 @@ export default function Employees() {
         }
       `}</style>
 
-      <div className="min-h-screen bg-zinc-50 p-6 lg:p-8">
+      <div className="min-h-screen bg-zinc-50 p-6 lg:p-8 font-comfortaa">
         <div className="mx-auto max-w-7xl">
           {/* Header */}
           <div className="mb-8 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">

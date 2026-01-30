@@ -87,7 +87,7 @@ export default function ApplyLeave() {
 
   return (
     <DashboardLayout user={user} role="EMPLOYEE">
-      <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8 font-comfortaa">
         
         {/* HEADER */}
         <div className="mb-12">

@@ -58,7 +58,7 @@ export default function Profile() {
 
   return (
     <DashboardLayout user={user} role={user.role}>
-      <div className="mx-auto max-w-4xl space-y-6">
+      <div className="mx-auto max-w-4xl space-y-6 font-comfortaa">
 
         {/* Header */}
         <div className="flex items-center justify-between rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 p-6 text-white shadow">

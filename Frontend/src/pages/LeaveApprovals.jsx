@@ -74,7 +74,7 @@ export default function LeaveApprovals() {
         }
       `}</style>
 
-      <div className="min-h-screen bg-zinc-50 p-6 lg:p-8">
+      <div className="min-h-screen bg-zinc-50 p-6 lg:p-8 font-comfortaa">
         <div className="mx-auto max-w-5xl">
           {/* Header */}
           <div className="mb-8">
